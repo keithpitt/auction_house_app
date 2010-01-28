@@ -1,0 +1,14 @@
+<h1><%=h @item.name %></h1>
+
+<p>Information Coming...</p>
+
+<h3>Auctions (<%= @item.auctions.count %> listings)</h3>
+
+<table class="listing">
+  <tr><th width="50%">Average Cost (per item)</th><td width="50%"><%= show_gold @item.average_buyout_price %></td></tr>
+  <tr><th>Average Cost (per 20 stack)</th><td><%= show_gold(@item.average_buyout_price * 20) %></td></tr>
+</table>
+
+<h3>View On...</h3>
+<a href="http://www.wowhead.com/?search=<%= h(@item.name) %>">Wowhead</a>
+<a href="http://thottbot.com/?s=<%= h(@item.name) %>">Thotbot</a>

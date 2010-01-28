@@ -1,0 +1,38 @@
+<p>
+  <b>Item:</b>
+  <%=h @auction.item_id %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%=h @auction.quantity %>
+</p>
+
+<p>
+  <b>Character:</b>
+  <%=h @auction.character_id %>
+</p>
+
+<p>
+  <b>Buyout:</b>
+  <%=h @auction.buyout %>
+</p>
+
+<p>
+  <b>Current bid:</b>
+  <%=h @auction.current_bid %>
+</p>
+
+<p>
+  <b>Orig bid:</b>
+  <%=h @auction.orig_bid %>
+</p>
+
+<p>
+  <b>Scanned at:</b>
+  <%=h @auction.scanned_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_auction_path(@auction) %> |
+<%= link_to 'Back', auctions_path %>

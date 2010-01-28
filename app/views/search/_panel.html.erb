@@ -1,0 +1,7 @@
+<form action="/search" method="get">
+  <select name="search_type">
+    <%= options_for_select(["Items", "Characters"], params[:search_type]) %>
+  </select>
+  <input type="text" id="search-text" name="q" value="<%= h(params[:q]) %>" />
+  <input type="submit" id="search-button" value="Search" />
+</form>

@@ -1,0 +1,21 @@
+
+<h1>Search<%= @search_type ? ": #{@search_type}" : '' %></h1>
+
+<div id="content_search">
+  <%= render :partial => 'search/panel' %>
+</div>
+
+<% if @search_type %>
+
+  <table class="listing">
+    <%= render @results %>
+  </table>
+
+  <%= will_paginate @results %>
+
+<% else %>
+
+  <p>Please choose a search type from the dropdown.</p>
+
+<% end %>
+

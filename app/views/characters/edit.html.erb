@@ -1,0 +1,16 @@
+<h1>Editing character</h1>
+
+<% form_for(@character) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @character %> |
+<%= link_to 'Back', characters_path %>

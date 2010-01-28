@@ -1,0 +1,10 @@
+<h1>Upload Scan</h1>
+
+<p>Upload your AuctionWhore.lua file here. You can find the file in <pre>[You WoW Folder]/WTF/Account/[Account Name]/SavedVariables/</pre></p>
+
+<%= error_messages_for :scan_file %>
+
+<% form_for :scan_file, :url => scan_files_path, :html => { :multipart => true } do |f| -%>
+  <%= f.file_field :uploaded_data %>
+  <p><%= submit_tag 'Upload Scan' %></p>
+<% end -%>

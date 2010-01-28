@@ -1,0 +1,32 @@
+<h1>Listing auctions</h1>
+
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Character</th>
+    <th>Buyout</th>
+    <th>Current bid</th>
+    <th>Orig bid</th>
+    <th>Scanned at</th>
+  </tr>
+
+<% @auctions.each do |auction| %>
+  <tr>
+    <td><%=h auction.item_id %></td>
+    <td><%=h auction.quantity %></td>
+    <td><%=h auction.character_id %></td>
+    <td><%=h auction.buyout %></td>
+    <td><%=h auction.current_bid %></td>
+    <td><%=h auction.orig_bid %></td>
+    <td><%=h auction.scanned_at %></td>
+    <td><%= link_to 'Show', auction %></td>
+    <td><%= link_to 'Edit', edit_auction_path(auction) %></td>
+    <td><%= link_to 'Destroy', auction, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New auction', new_auction_path %>

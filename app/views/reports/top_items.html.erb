@@ -1,0 +1,18 @@
+<h1>Top Items</h1>
+
+<table class="listing">
+  <tr>
+    <th width="7%">&nbsp;</th>
+    <th width="33%">Name</th>
+    <th width="30%" class="number">Avg Cost</th>
+    <th width="30%" class="number">(per 20)</th>
+  </tr>
+  <% @top_items.each do |row| %>
+    <tr>
+      <td><%= row[:count] %></td>
+      <td><%= link_to h(row[:item].name), row[:item] %></td>
+      <td class="number"><%= show_gold row[:item].average_buyout_price %></td>
+      <td class="number"><%= show_gold row[:item].average_buyout_price * 20 %></td>
+    </tr>
+  <% end %>
+</table>
